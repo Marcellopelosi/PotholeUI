@@ -1,3 +1,4 @@
 ultralytics
+libgl1
 streamlit
 opencv-python-headless
