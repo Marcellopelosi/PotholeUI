@@ -19,13 +19,13 @@ def main():
     st.title('Image Selector App')
 
     # Display the table
-    st.table(df)
+    st.dataframe(df)
 
     # Selectbox to choose the image
-    selected_image = st.selectbox('Select Image', df['Path'])
+    selected_frame = st.selectbox('Select Image', df['Path'])
 
     # Display the selected image
-    display_image(selected_image)
+    display_image(selected_frame)
 
 if __name__ == '__main__':
     main()
