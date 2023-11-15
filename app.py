@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import pandas as pd
 
 # Sample data for the table
 data = {
