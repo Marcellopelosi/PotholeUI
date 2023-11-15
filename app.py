@@ -27,5 +27,5 @@ if uploaded_file is not None:
     # Selectbox to choose the image
     selected_frame = st.selectbox('Select Image', df['Path'])
 
-# Display the selected image
-display_image(selected_frame)
+    # Display the selected image
+    display_image(selected_frame)
