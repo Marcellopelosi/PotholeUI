@@ -2,6 +2,11 @@ import streamlit as st
 from PIL import Image
 import pandas as pd
 
+# Function to display selected image
+def display_image(image_path):
+    img = Image.open(image_path)
+    st.image(img, caption='Selected Image', use_column_width=True)
+
 st.markdown("### Upload a video file:")
 uploaded_file = st.file_uploader("Choose a video file", type=['mp4', 'avi'])
 
@@ -13,24 +18,14 @@ if uploaded_file is not None:
         'Path': ['path_to_image1.jpg', 'path_to_image1.jpg', 'path_to_image1.jpg']
     }
     df = pd.DataFrame(data)
-    
-    # Function to display selected image
-    def display_image(image_path):
-        img = Image.open(image_path)
-        st.image(img, caption='Selected Image', use_column_width=True)
-    
-    # Streamlit app
-    def main():
-        st.title('Image Selector App')
-    
-        # Display the table
-        st.dataframe(df)
-    
-        # Selectbox to choose the image
-        selected_frame = st.selectbox('Select Image', df['Path'])
 
-    # Display the selected image
-    display_image(selected_frame)
+    st.title('Image Selector App')
 
-if __name__ == '__main__':
-    main()
+    # Display the table
+    st.dataframe(df)
+
+    # Selectbox to choose the image
+    selected_frame = st.selectbox('Select Image', df['Path'])
+
+# Display the selected image
+display_image(selected_frame)
