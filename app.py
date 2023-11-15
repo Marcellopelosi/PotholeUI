@@ -2,6 +2,8 @@ import streamlit as st
 from PIL import Image
 import pandas as pd
 from Fundamentals import results_elaboration
+import ultralytics
+from ultralytics import YOLO
 
 model_path = "/best_pothole.pt"
 video_path = "/temp_video.mp4"
