@@ -1,9 +1,9 @@
-import ultralytics
-from ultralytics import YOLO
-import numpy as np
-from PIL import Image
-import cv2
-import pandas as pd
+# import ultralytics
+# from ultralytics import YOLO
+# import numpy as np
+# from PIL import Image
+# import cv2
+# import pandas as pd
 
 model_path = "/best_pothole.pt"
 video_path = "/temp_video.mp4"
