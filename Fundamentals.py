@@ -62,7 +62,7 @@ def bboxes_coords_list_creator(frames_list,model):
 
 def results_elaboration(model_path, video_path):
   # Load the model
-  model = YOLO(model_path)
+  model = ultralytics.YOLO(model_path)
   # Create frames_list
   frames_list = video_to_frames(video_path)
   # Bboxes coords list creation
