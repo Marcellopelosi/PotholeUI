@@ -1,9 +1,8 @@
-# import ultralytics
-# from ultralytics import YOLO
-# import numpy as np
-# from PIL import Image
-# import cv2
-# import pandas as pd
+from ultralytics import YOLO
+import numpy as np
+from PIL import Image
+import cv2
+import pandas as pd
 
 model_path = "/best_pothole.pt"
 video_path = "/temp_video.mp4"
@@ -62,7 +61,7 @@ def bboxes_coords_list_creator(frames_list,model):
 
 def results_elaboration(model_path, video_path):
   # Load the model
-  model = ultralytics.YOLO(model_path)
+  model = YOLO(model_path)
   # Create frames_list
   frames_list = video_to_frames(video_path)
   # Bboxes coords list creation
