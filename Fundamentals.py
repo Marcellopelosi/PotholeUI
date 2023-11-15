@@ -1,3 +1,4 @@
+import ultralytics
 from ultralytics import YOLO
 import numpy as np
 from PIL import Image
