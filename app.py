@@ -2,7 +2,6 @@ import streamlit as st
 from PIL import Image
 import pandas as pd
 import ultralytics
-from ultralytics import YOLO
 from Fundamentals import results_elaboration
 
 
